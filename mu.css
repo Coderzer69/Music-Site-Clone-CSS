@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --sidebar_gray_color: #919ba4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+body {
+  display: flex;
+}
+
+.left {
+  background: rgb(24, 25, 29);
+  height: 100vh;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  position: relative;
+}
+
+.right {
+  background: rgb(27, 29, 36);
+  height: 100vh;
+  width: calc(100vw - 280px);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logout_icon {
+  width: 20px;
+  right: 20px;
+  color: var(--sidebar_gray_color);
+  cursor: pointer;
+}
+
+.logout_icon:hover {
+  color: white;
+}
+
+/* -- Mu6 -- */
+.left h1 {
+  color: white;
+}
+
+span {
+  color: rgb(209, 86, 86);
+}
+/*-------------*/
+
+.sidebar_buttons {
+  color: var(--sidebar_gray_color);
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.sidebar_buttons svg,
+.sidebar_buttons img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.sidebar_buttons div {
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar_buttons div:hover {
+  color: white;
+}
+
+.playing_image_picture {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.bottom_player {
+  margin-top: 40px;
+}
+
+.song_name {
+  color: white;
+  font-size: 15px;
+  margin: 7px 0;
+  font-weight: 500;
+}
+
+.artist_name {
+  color: var(--sidebar_gray_color);
+  font-size: 13px;
+}
+
+.player_controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: rgb(154, 169, 192);
+  margin-top: 15px;
+}
+
+.player_controls svg {
+  width: 19px;
+  cursor: pointer;
+}
+
+.menu {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+  }
+  .menu {
+    display: block;
+  }
+}
